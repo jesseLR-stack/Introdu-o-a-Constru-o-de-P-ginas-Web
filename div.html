@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exposição de Quadros Modernos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER FIXO: queremos que o cabeçalho esteja sempre visível -->
+  <!-- position: fixed usado para manter o cabeçalho no topo da viewport -->
+  <header class="site-header">
+    <div class="brand">Galeria Modernista</div>
+  </header>
+
+  <div class="page-wrapper">
+
+    <!-- MENU LATERAL STICKY: menu que acompanha o scroll enquanto houver espaço -->
+    <!-- Usamos position: sticky para que o menu cole ao topo após rolar até ele -->
+    <!-- Comentário HTML: position: sticky mantém o menu visível sem tirá-lo do fluxo natural até certo ponto. -->
+    <aside class="side-menu" role="navigation">
+      <div class="menu-inner">
+        <h3>Obrigado pela Visita!</h3>
+      </div>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="content">
+
+      <!-- Seção de objetivo do site -->
+      <!-- Esta div usa position: static (padrão) — nenhuma propriedade de posicionamento aplicada -->
+      <!-- Comentário HTML: position: static é o fluxo normal; usamos para conteúdos que não precisam de posicionamento especial. -->
+      <section id="objetivo" class="hero">
+        <h1>Exposição de Quadros Modernos</h1>
+        <p>Objetivo: Apresentar uma curadoria de quadros modernos, com informações técnicas e destaque das peças.</p>
+        <div class="hero-actions">
+        </div>
+      </section>
+
+      <!-- Seção de destaques com posicionamento relativo + absolute -->
+      <!-- Comentário HTML: container com position: relative para servir de referência para elementos position: absolute (badges). -->
+      <section id="destaques" class="destaques">
+        <h2>Destaques</h2>
+        <div class="destaque-grid">
+          <!-- Cada cartão tem um overlay absoluto para o badge -->
+          <article class="card">
+            <div class="card-art" style="background-image:linear-gradient(120deg,#f9c5d1,#f6d365);"></div>
+            <!-- position: absolute para posicionar o badge sobre a imagem -->
+            <!-- Comentário HTML: badge posicionado absolute dentro de um container relative para controle de layout -->
+            <span class="badge">Novo</span>
+            <h3>Horizonte Vermelho</h3>
+            <p>Óleo sobre tela — 80x60cm</p>
+          </article>
+
+          <article class="card">
+            <div class="card-art" style="background-image:linear-gradient(120deg,#a8edea,#fed6e3);"></div>
+            <span class="badge">Curadoria</span>
+            <h3>Geometria Sonora</h3>
+            <p>Acrílica — 60x60cm</p>
+          </article>
+
+          <article class="card">
+            <div class="card-art" style="background-image:linear-gradient(120deg,#cfd9df,#e2ebf0);"></div>
+            <span class="badge">Prêmio</span>
+            <h3>Textura Urbana</h3>
+            <p>Mixed media — 70x50cm</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Galeria: usamos CSS Grid para organizar as peças (exemplo opcional) -->
+      <!-- Comentário HTML: display: grid aplicado para criar um layout de galeria responsiva e consistente -->
+      <section id="galeria" class="galeria">
+        <h2>Galeria</h2>
+
+        <!-- NAV BUTTONS com float: left / float: right -->
+        <!-- Comentário HTML: usamos float para posicionar botões de paginação/ação sem usar flex neste bloco -->
+        <div class="nav-buttons">
+          <button class="float-left">Anterior</button> <!-- float: left -->
+          <button class="float-right">Próximo</button>  <!-- float: right -->
+        </div>
+
+        <div class="gallery-grid">
+          <!-- item com position: relative (para demonstrar) -->
+          <figure class="gallery-item">
+            <div class="thumb" style="background-image:linear-gradient(120deg,#ffd3a5,#fd6585);"></div>
+            <figcaption>Quadro A — Informações técnicas</figcaption>
+            <!-- exemplo de elemento absolute dentro do relativo -->
+            <div class="price-tag">R$ 4.200</div>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="thumb" style="background-image:linear-gradient(120deg,#a1c4fd,#c2e9fb);"></div>
+            <figcaption>Quadro B — Informações técnicas</figcaption>
+            <div class="price-tag">R$ 3.500</div>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="thumb" style="background-image:linear-gradient(120deg,#fbc2eb,#a6c1ee);"></div>
+            <figcaption>Quadro C — Informações técnicas</figcaption>
+            <div class="price-tag">R$ 5.800</div>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="thumb" style="background-image:linear-gradient(120deg,#fdfbfb,#ebedee);"></div>
+            <figcaption>Quadro D — Informações técnicas</figcaption>
+            <div class="price-tag">R$ 2.900</div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Seção explicativa — descreve cada posicionamento ao usuário -->
+      <section id="posicionamentos" class="explain">
+        <h2>Explicação dos Posicionamentos (visível)</h2>
+        <ul>
+          <li><strong>position: static</strong> — fluxo normal do documento; usado para conteúdos que seguem o fluxo sem posicionamento especial.</li>
+          <li><strong>position: relative</strong> — desloca um elemento sem tirá-lo do fluxo; aqui é usado para ser referência dos elementos <em>absolute</em>.</li>
+          <li><strong>position: absolute</strong> — posicionamento relativo ao ancestral posicionado (ex.: badges e price-tags). Bom para sobreposições controladas.</li>
+          <li><strong>position: fixed</strong> — elemento fixo na viewport, independente do scroll (usado no cabeçalho).</li>
+          <li><strong>position: sticky</strong> — mistura de static e fixed; o elemento "gruda" quando chega ao topo (usado no menu lateral).</li>
+          <li><strong>float: left / float: right</strong> — alinham elementos lado a lado fora do fluxo normal; útil em pequenos elementos como botões de navegação.</li>
+          <li><strong>display: flex</strong> — alinha e distribui itens de forma simples (usado no header e botões da hero).</li>
+          <li><strong>display: grid</strong> — cria layouts bidimensionais para galerias e grade de cartões.</li>
+        </ul>
+      </section>
+
+      <!-- Seção de contato / rodapé menor dentro do main -->
+      <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <p>Envie um e-mail para <a href="mailto:jesse.rocha2@estudante.ifto.edu.br">jesse.rocha2@estudante.ifto.edu.br</a> para agendar visitação.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- RODAPÉ: elemento no fluxo (position: static) -->
+  <footer class="site-footer">
+    <p> Galeria Modernista — Trabalho de Introdução a Construção de páginas Web.</p>
+  </footer>
+
+</body>
+</html>
