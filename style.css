@@ -1,0 +1,215 @@
+/* Paleta de cores coerente: tons quentes + neutros (moderno / galeria) */
+:root{
+  --bg:#fbfaf9;
+  --muted:#767676;
+  --accent:#2b2b2b;
+  --primary:#ff6b6b;
+  --secondary:#4b7bec;
+  --card-bg: #ffffff;
+  --glass: rgba(255,255,255,0.6);
+  --maxwidth: 1200px;
+  --header-height: 64px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Reset leve */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--bg);
+  color:var(--accent);
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* HEADER FIXO */
+.site-header{
+  position: fixed; /* fixa no topo da viewport */
+  top:0; left:0; right:0;
+  height:var(--header-height);
+  background:linear-gradient(90deg, rgba(43,43,43,0.95), rgba(70,70,70,0.95));
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 1rem;
+  z-index:1000;
+  box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+.brand{font-weight:700;letter-spacing:0.6px}
+.top-nav a{
+  color:rgba(255,255,255,0.9);
+  margin-left:1rem;
+  text-decoration:none;
+  font-size:0.95rem;
+}
+.top-nav a:hover{text-decoration:underline}
+
+/* LAYOUT: aside sticky + main content */
+.page-wrapper{
+  max-width:var(--maxwidth);
+  margin: calc(var(--header-height) + 1rem) auto 2rem;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* SIDE MENU (sticky) */
+.side-menu{
+  position: sticky; /* sticky para "colar" quando chegar ao topo */
+  top: calc(var(--header-height) + 0.75rem);
+  align-self:start;
+  height:fit-content;
+  background:var(--card-bg);
+  border-radius:12px;
+  padding:1rem;
+  box-shadow:0 6px 18px rgba(20,20,20,0.06);
+  font-size:0.95rem;
+}
+.side-menu h3{margin-bottom:0.5rem}
+.side-menu ul{list-style:none}
+.side-menu a{display:block;text-decoration:none;color:var(--accent);padding:6px 0}
+.side-menu a:hover{color:var(--primary)}
+
+.content{
+  min-height:60vh;
+}
+
+/* HERO (position: static - fluxo natural) */
+.hero{
+  background:linear-gradient(180deg,#fff 0%, rgba(255,255,255,0.8) 100%);
+  padding:1.5rem;
+  border-radius:12px;
+  box-shadow:0 6px 16px rgba(30,30,30,0.04);
+  margin-bottom:1.25rem;
+}
+.hero h1{font-size:1.6rem;margin-bottom:0.5rem}
+.hero p{color:var(--muted);margin-bottom:1rem}
+.hero-actions{display:flex;gap:.5rem}
+.btn{
+  padding:.6rem .9rem;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+  background:var(--primary);
+  color:white;
+  font-weight:600;
+}
+.btn + .btn{background:var(--secondary)}
+
+/* DESTAQUES — relative container + absolute badges */
+.destaques{
+  margin-bottom:1.25rem;
+}
+.destaque-grid{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.card{
+  background:var(--card-bg);
+  border-radius:10px;
+  padding:0.8rem;
+  width:calc(33% - 0.66rem);
+  min-width:220px;
+  box-shadow:0 8px 20px rgba(20,20,20,0.04);
+  position:relative; /* referência para o badge absoluto */
+}
+.card .card-art{
+  height:140px;
+  border-radius:8px;
+  background-size:cover;
+  background-position:center;
+  margin-bottom:.6rem;
+}
+.badge{
+  position:absolute; /* sobreposição controlada */
+  top:10px;
+  right:10px;
+  background:var(--primary);
+  color:white;
+  padding:6px 8px;
+  border-radius:6px;
+  font-size:0.8rem;
+  font-weight:700;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* GALERIA — grid */
+.galeria{margin:1.25rem 0}
+.nav-buttons{margin-bottom:0.75rem; overflow:auto; position:relative;}
+.nav-buttons .float-left{float:left}
+.nav-buttons .float-right{float:right}
+.nav-buttons button{padding:0.5rem 0.8rem;border-radius:8px;border:0;background:var(--glass);cursor:pointer}
+
+/* Gallery grid usando CSS Grid */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+}
+.gallery-item{
+  background:var(--card-bg);
+  border-radius:10px;
+  padding:0.6rem;
+  position:relative; /* referência para price-tag absoluto */
+  box-shadow:0 8px 20px rgba(20,20,20,0.04);
+}
+.gallery-item .thumb{
+  height:160px;
+  border-radius:8px;
+  background-size:cover;
+  background-position:center;
+}
+.gallery-item figcaption{margin-top:.5rem;color:var(--muted);font-size:0.95rem}
+/* price-tag posicionado absolute dentro do relativo */
+.price-tag{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:rgba(0,0,0,0.7);
+  color:#fff;
+  padding:6px 8px;
+  border-radius:6px;
+  font-weight:700;
+  font-size:0.9rem;
+}
+
+/* EXPLAIN: visível para o usuário */
+.explain{
+  background:linear-gradient(90deg,#ffffff,#fbfbfb);
+  padding:1rem;
+  border-radius:10px;
+  margin-top:1rem;
+  color:var(--accent);
+}
+.explain ul{list-style:disc;padding-left:1.25rem}
+.explain li{margin-bottom:0.5rem}
+
+/* CONTATO E RODAPÉ */
+.contato{margin-top:1rem;padding:1rem;background:var(--card-bg);border-radius:10px}
+.site-footer{
+  margin-top:1rem;
+  text-align:center;
+  padding:1rem;
+  color:var(--muted);
+  background:linear-gradient(90deg,#fff,#f7f7f7);
+  border-top:1px solid rgba(0,0,0,0.03);
+}
+
+/* RESPONSIVIDADE BÁSICA */
+@media (max-width:980px){
+  .page-wrapper{grid-template-columns:1fr; padding:0 1rem}
+  .side-menu{position:relative; top:auto; margin-bottom:1rem}
+  .card{width:48%}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .destaque-grid{flex-direction:column}
+  .card{width:100%}
+  .gallery-grid{grid-template-columns:1fr}
+  .top-nav{display:none}
+  .hero h1{font-size:1.3rem}
+}
