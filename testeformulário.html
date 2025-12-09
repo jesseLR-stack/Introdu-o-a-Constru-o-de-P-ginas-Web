@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Moderno</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('bolsonaropresidente.jpg') center/cover no-repeat fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 600px;
+            background: white;
+            margin: 60px auto;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+        }
+
+        .header-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0d47a1;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 15px;
+            margin-top: 8px;
+            border-radius: 6px;
+            border: 1px solid #90caf9;
+            font-size: 16px;
+        }
+
+        .grupo {
+            margin-top: 20px;
+        }
+
+        .grupo p {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .botoes {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .botoes input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .reset {
+            background: #b0bec5;
+        }
+
+        .submit {
+            background: #0d47a1;
+            color: white;
+        }
+
+        .submit:hover {
+            background: #08306b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>Formulário</h2>
+
+        <form>
+
+            <label for="pnome">Primeiro nome</label>
+            <input type="text" id="pnome" name="pnome">
+
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" id="sobrenome" name="sobrenome">
+
+            <div class="grupo">
+                <p>Quem é o mais Ladrão?</p>
+
+                <label><input type="checkbox" name="opt1"> Lula</label>
+                <label><input type="checkbox" name="opt2"> Alexandre de Moraes</label>
+                <label><input type="checkbox" name="opt3"> Sergio Cabral</label>
+                <br>
+                <br>
+            </div>
+
+            <div class="grupo">
+                <p>Quem foi o melhor presidente da história do Brasil?</p>
+
+                <label><input type="radio" name="escolha"> Bolsonaro</label>
+                <label><input type="radio" name="escolha"> Bolsomito</label>
+                <label><input type="radio" name="escolha"> Capitão Bolsonaro</label>
+                <br>
+                <br>
+            </div>
+
+            <div class="botoes">
+                <input type="reset" value="Limpar" class="reset">
+                <input type="submit" value="Enviar" class="submit">
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
