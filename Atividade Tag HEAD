@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página explicando os conceitos da tag HEAD e respondendo às questões solicitadas.">
+    <title>Conceitos da Tag HEAD</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f2f2f2;
+        }
+
+        header {
+            background: #228B22;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        h1, h2 {
+            font-weight: bold;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px #ddd;
+        }
+
+        .codigo {
+            background: #eee;
+            padding: 10px;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Principais Conceitos da Tag &lt;head&gt;</h1>
+    <p>Esta página apresenta explicações detalhadas sobre o uso da tag HEAD no HTML, além das respostas às perguntas solicitadas na atividade.</p>
+</header>
+
+<section>
+    <h2>1 - Qual a utilidade da tag HEAD?</h2>
+    <p>A tag <strong>&lt;head&gt;</strong> guarda informações importantes sobre a página, mas que não aparecem visualmente. Ela contém metadados, links de estilo, scripts, título da página e outras instruções usadas pelos navegadores, motores de busca e dispositivos de acessibilidade.</p>
+</section>
+
+<section>
+    <h2>2 - Cite 4 elementos HTML usados dentro do HEAD</h2>
+    <ul>
+        <li><strong>&lt;title&gt;</strong> — Define o título que aparece na aba do navegador.</li>
+        <li><strong>&lt;meta&gt;</strong> — Define metadados, como charset e descrição.</li>
+        <li><strong>&lt;link&gt;</strong> — Importa arquivos externos, como CSS.</li>
+        <li><strong>&lt;style&gt;</strong> — Permite escrever CSS diretamente dentro do HEAD.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>3 - O que é um charset? Qual sua utilidade?</h2>
+    <p><strong>Charset</strong> é o conjunto de caracteres que a página utiliza. Ele informa ao navegador como interpretar letras, acentos e símbolos especiais.</p>
+    <p>Exemplo: <strong>UTF-8</strong> permite que caracteres como "ç", "á", "ê", "😀" funcionem corretamente.</p>
+</section>
+
+<section>
+    <h2>4 - Caso o charset não seja definido, qual é o padrão?</h2>
+    <p>O padrão geralmente é o <strong>ISO-8859-1</strong> (Latin-1), que não suporta muitos caracteres atuais. Por isso, usar <strong>UTF-8</strong> é essencial hoje.</p>
+</section>
+
+<section>
+    <h2>5 - Sobre os charsets UTF-8, ASCII e ISO-8859-1</h2>
+    <ul>
+        <li><strong>ASCII</strong>: mais antigo, limitado a 128 caracteres básicos (sem acentos).</li>
+        <li><strong>ISO-8859-1</strong>: permite acentos da língua portuguesa, mas ainda limitado.</li>
+        <li><strong>UTF-8</strong>: o mais moderno e universal, aceitando praticamente todos os símbolos e emojis.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>6 - Como usar símbolos e emojis em páginas web</h2>
+    <p>Você pode usar emojis diretamente ou utilizar entidades HTML.</p>
+
+    <p><strong>Exemplos:</strong></p>
+    <ul>
+        <li>Emojis direto: 😀🔥⭐</li>
+        <li>Entidades HTML: &amp;copy; (©), &amp;hearts; (♥), &amp;Delta; (Δ)</li>
+    </ul>
+
+    <p class="codigo">
+        Exemplo de código: <br>
+        &lt;p&gt;Eu gosto de HTML &amp;hearts;&lt;/p&gt;
+    </p>
+</section>
+
+<section>
+    <h2>7 - Exemplo com símbolo + figura (diagrama)</h2>
+    <p>Abaixo está um pequeno “diagrama” feito com símbolos HTML mostrando um fluxo simples de algoritmo:</p>
+
+    <pre class="codigo">
+        &Delta;  Início
+         |
+        ▼
+        ■  Ler número
+         |
+        ▼
+        □  Somar 1 ao número
+         |
+        ▼
+        ●  Mostrar resultado
+         |
+        ▼
+        &check; Fim
+    </pre>
+</section>
+
+</body>
+</html>
