@@ -2,10 +2,70 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>Tags <audio> e <video> no HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
+        h1, h2 { color: #2c3e50; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
+        ul { margin-bottom: 20px; }
+    </style>
 </head>
 <body>
-   <h1>Quais as funcionalidades das Tags de Áudio e Vídeo</h1> 
+
+<h1>Tags &lt;audio&gt; e &lt;video&gt; no HTML</h1>
+
+<p>As tags <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code> permitem inserir e controlar mídias diretamente no navegador, sem uso de plugins externos. Elas fazem parte do HTML5 e são essenciais no desenvolvimento web moderno.</p>
+
+<hr>
+
+<h2>Tag &lt;audio&gt;</h2>
+<p>Utilizada para reproduzir arquivos de áudio como músicas, podcasts e efeitos sonoros.</p>
+
+<h3>Atributos da tag &lt;audio&gt;</h3>
+<ul>
+    <li><strong>src</strong> – Caminho do arquivo de áudio</li>
+    <li><strong>controls</strong> – Exibe os controles de reprodução</li>
+    <li><strong>autoplay</strong> – Inicia o áudio automaticamente</li>
+    <li><strong>loop</strong> – Repete o áudio continuamente</li>
+    <li><strong>muted</strong> – Inicia o áudio sem som</li>
+    <li><strong>preload</strong> – Define como o áudio será carregado (auto, metadata, none)</li>
+</ul>
+
+<h3>Exemplo:</h3>
+<pre><code>&lt;audio src="musica.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+
+<hr>
+
+<h2>Tag &lt;video&gt;</h2>
+<p>Utilizada para exibir vídeos diretamente na página, com suporte a controles, legendas e tela cheia.</p>
+
+<h3>Atributos da tag &lt;video&gt;</h3>
+<ul>
+    <li><strong>src</strong> – Caminho do arquivo de vídeo</li>
+    <li><strong>controls</strong> – Exibe os controles do vídeo</li>
+    <li><strong>autoplay</strong> – Inicia o vídeo automaticamente</li>
+    <li><strong>loop</strong> – Repete o vídeo</li>
+    <li><strong>muted</strong> – Inicia o vídeo sem áudio</li>
+    <li><strong>preload</strong> – Define o carregamento do vídeo</li>
+    <li><strong>width</strong> – Define a largura do vídeo</li>
+    <li><strong>height</strong> – Define a altura do vídeo</li>
+    <li><strong>poster</strong> – Imagem exibida antes do vídeo iniciar</li>
+</ul>
+
+<h3>Exemplo:</h3>
+<pre><code>&lt;video src="video.mp4" controls width="400" poster="capa.jpg"&gt;&lt;/video&gt;</code></pre>
+
+<hr>
+
+<h2>Boas práticas</h2>
+<ul>
+    <li>Use vários formatos com a tag <code>&lt;source&gt;</code> para maior compatibilidade</li>
+    <li>Sempre utilize <code>controls</code> para melhor usabilidade</li>
+    <li>Evite <code>autoplay</code> com som ativo</li>
+    <li>Utilize <code>&lt;track&gt;</code> para legendas e acessibilidade</li>
+</ul>
+
+<p><strong>Conclusão:</strong> As tags <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code> são fundamentais para criar páginas ricas em conteúdo multimídia, acessíveis e modernas.</p>
+
 </body>
 </html>
