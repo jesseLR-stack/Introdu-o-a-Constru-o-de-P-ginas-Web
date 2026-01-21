@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Minhas Atividades</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+        header {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            opacity: 0.85;
+        }
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #00e0ff;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 10px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        h2, h3 {
+            color: #00e0ff;
+        }
+        h4 {
+            color: #00e0ff;
+        }
+        h1 {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Central de Atividades</h1>
+    <h4>JESSÉ LUSTOSA BARREIRA ROCHA</h4>
+</header>
+
+<main>
+    <section class="grid">
+
+        <div class="card" onclick="location.href='atividade1.html'">
+            <h2>HTML Básico</h2>
+            <p>Conceitos fundamentais de HTML, estrutura, tags e boas práticas.</p>
+            <a href="atividade1.html">Acessar atividade →</a>
+        </div>
+
+        <div class="card" onclick="location.href='atividade2.html'">
+            <h2>Listas e Tabelas</h2>
+            <p>Uso correto de listas ordenadas, não ordenadas e tabelas.</p>
+            <a href="atividade2.html">Acessar atividade →</a>
+        </div>
+
+        <div class="card" onclick="location.href='audio-video.html'">
+            <h2>Áudio e Vídeo</h2>
+            <p>Implementação das tags &lt;audio&gt; e &lt;video&gt; no HTML5.</p>
+            <a href="audio-video.html">Acessar atividade →</a>
+        </div>
+
+        <div class="card" onclick="location.href='css-basico.html'">
+            <h2>CSS Básico</h2>
+            <p>Estilização de páginas, cores, fontes, layouts e responsividade.</p>
+            <a href="css-basico.html">Acessar atividade →</a>
+        </div>
+
+        <div class="card" onclick="location.href='projeto-final.html'">
+            <h2>Projeto Final</h2>
+            <p>Aplicação prática reunindo HTML, CSS e interatividade.</p>
+            <a href="projeto-final.html">Acessar atividade →</a>
+        </div>
+
+    </section>
+</main>
+
+</body>
+</html>
